@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      DB_HOST: seu-endereco-do-rds.amazonaws.com
+      DB_USER: postgres
+      DB_PASSWORD: sua_senha_forte
+      DB_NAME: biblioteca
+      DB_PORT: 5432
